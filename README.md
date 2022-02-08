@@ -1,0 +1,2 @@
+<h1>Design Patterns</h1>
+<p>In software engineering, a software design pattern ia a general, reusable solution to a commonly occuring problem within a given context in software design. It is not a finished design that can be transformed directly into source or machine code. Rather, it is a <b>description</b> or <b>template</b> for how to solve a problem that can be used in many different situations. Design patterns are formalized <b>best practices</b> that the programmer can use to solve common problems when designing an application or system.</p>
