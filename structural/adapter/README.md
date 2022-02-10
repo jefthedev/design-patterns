@@ -2,7 +2,7 @@
 
 <p>Also known as a wrapper. This pattern is used to translate the interface of one class into another interface. This way we can make classes work together that couldn't otherwise because of incompatible interfaces. Here we'll design an object adapter that relies on <b>object aggregation</b>, but the same pattern can also be implemented with <b>multiple inheritance</b> when available on your programming language.</p>
 
-<h2>Aplicability</h2>
+<h2>Uses</h2>
 <p>Use when:</p>
 <ul>
 	<li>You does not want your code to depend directly on third parties code.</li>

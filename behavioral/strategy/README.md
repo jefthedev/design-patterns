@@ -2,7 +2,7 @@
 
 <p>You need to define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.</p>
 
-<h2>Aplicability</h2>
+<h2>Uses</h2>
 <p>Use when:</p>
 <ul>
 	<li>You does not want your code to depend directly on third parties code.</li>
