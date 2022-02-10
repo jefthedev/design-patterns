@@ -25,10 +25,3 @@ Console.WriteLine(String.Format("{0:0.00}: {1:0.00}; {2:0.00}: {3:0.00}; {4:0.00
                                                                                             , product2.name, consumableDiscount.GetDiscount(product2)
                                                                                             , product3.name, consumableDiscount.GetDiscount(product3) ));
 Console.WriteLine("Done!\n");
-
-DiscountStrategy weekendDiscount = new WeekendDiscount();
-Console.WriteLine("Testing Weekend Discount Strategy...");
-Console.WriteLine(String.Format("{0:0.00}: {1:0.00}; {2:0.00}: {3:0.00}; {4:0.00}: {5:0.00}.", product1.name, weekendDiscount.GetDiscount(product1)
-                                                                                            , product2.name, weekendDiscount.GetDiscount(product2)
-                                                                                            , product3.name, weekendDiscount.GetDiscount(product3) ));
-Console.WriteLine("Done!\n");
