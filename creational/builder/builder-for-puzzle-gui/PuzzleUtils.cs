@@ -5,22 +5,22 @@
     {
         public abstract string GetRepresentation();
 
-        private PuzzleUtils.PuzzleBackground _background = null;
-        public PuzzleUtils.PuzzleBackground background
+        private PuzzleUtils.PuzzleBackground? _background = null;
+        public PuzzleUtils.PuzzleBackground? background
         {
             get { return _background; }
             set { _background = value; }
         }
 
-        private PuzzleUtils.PuzzleBackgroundEdges _edges = null;
-        public PuzzleUtils.PuzzleBackgroundEdges edges
+        private PuzzleUtils.PuzzleBackgroundEdges? _edges = null;
+        public PuzzleUtils.PuzzleBackgroundEdges? edges
         {
             get { return _edges; }
             set { _edges = value; }
         }
 
-        private PuzzleUtils.PuzzleItems _items = null;
-        public PuzzleUtils.PuzzleItems items
+        private PuzzleUtils.PuzzleItems? _items = null;
+        public PuzzleUtils.PuzzleItems? items
         {
             get { return _items; }
             set { _items = value; }
@@ -51,7 +51,7 @@
     {
         public override string GetRepresentation()
         {
-            return "Here's a Default Puzzle GUI.";
+            return "Here's a default Puzzle GUI.";
         }
     }
 
@@ -85,12 +85,13 @@
     {
         public override string GetRepresentation()
         {
-            return "Here's an Event Puzzle GUI.";
+            return "Here's an event Puzzle GUI.";
         }
     }
     
     public class EventPuzzleBackground: PuzzleBackground
     {
+        public EventPuzzleBackground() {}
         public string GetRepresentation()
         {
             return "This is a event puzzle background.";
@@ -99,6 +100,7 @@
 
     public class EventPuzzleBackgroundEdges: PuzzleBackgroundEdges
     {
+        public EventPuzzleBackgroundEdges() {}
         public string GetRepresentation()
         {
             return "These are event puzzle edges.";
@@ -107,6 +109,7 @@
 
     public class EventPuzzleItems: PuzzleItems
     {
+        public EventPuzzleItems() {}
         public string GetRepresentation()
         {
             return "These are event puzzle items.";

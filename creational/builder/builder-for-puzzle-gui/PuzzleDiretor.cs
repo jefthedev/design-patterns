@@ -1,20 +1,15 @@
 ﻿public class PuzzleGUIDirector
 {
-    public PuzzleUtils.PuzzleGUI ConstructPuzzleGUI(PuzzleGUIBuilder builder)
+    public PuzzleUtils.PuzzleGUI ConstructPuzzleGUI(PuzzleGUIBuilderProtocol builder)
     {
-        PuzzleUtils.PuzzleGUI puzzleGUI = builder.CreateGUI();
-        Console.WriteLine(puzzleGUI.GetRepresentation());
+        builder.CreateGUI().CreateBackground().CreateEdges().CreateItems();
 
-        puzzleGUI.background = builder.CreateBackground();
-        Console.WriteLine(puzzleGUI.background.GetRepresentation());
+        PuzzleUtils.PuzzleGUI puzzle = builder.GetPuzzleGUI();
+        Console.WriteLine(puzzle.GetRepresentation());
+        Console.WriteLine("\n");
+        builder.Reset();
 
-        puzzleGUI.edges = builder.CreateEdges();
-        Console.WriteLine(puzzleGUI.edges.GetRepresentation());
-
-        puzzleGUI.items = builder.CreateItems();
-        Console.WriteLine(puzzleGUI.items.GetRepresentation());
-
-        return puzzleGUI;
+        return builder.GetPuzzleGUI();
     }
 
 }

@@ -1,26 +1,51 @@
-﻿public class DefaultPuzzleGUIBuilder: PuzzleGUIBuilder
+﻿public class DefaultPuzzleGUIBuilder: PuzzleGUIBuilderProtocol
 {
-    public override PuzzleUtils.PuzzleGUI CreateGUI()
+    /// <summary>The object to be constructed.</summary>
+    private PuzzleUtils.PuzzleGUI _GUI = new PuzzleUtils.DefaultPuzzleGUI();
+    public PuzzleUtils.PuzzleGUI GUI
     {
-        return new PuzzleUtils.DefaultPuzzleGUI();
+        get { return _GUI; }
+        set { _GUI = value; }
     }
 
-    public override PuzzleUtils.PuzzleBackground CreateBackground()
+    public override PuzzleGUIBuilderProtocol CreateGUI()
+    {
+        Console.WriteLine("New default GUI created...");
+        this.GUI = new PuzzleUtils.DefaultPuzzleGUI();
+        return this;
+    }
+
+    public override PuzzleGUIBuilderProtocol CreateBackground()
     {
         Console.WriteLine("Adding default background...");
-        return new PuzzleUtils.DefaultPuzzleBackground();
+        this.GUI.background = new PuzzleUtils.DefaultPuzzleBackground();
+        return this;
     }
 
-    public override PuzzleUtils.PuzzleBackgroundEdges CreateEdges()
+    public override PuzzleGUIBuilderProtocol CreateEdges()
     {
         Console.WriteLine("Adding default edges...");
-        return new PuzzleUtils.DefaultPuzzleBackgroundEdges();
+        this.GUI.edges = new PuzzleUtils.DefaultPuzzleBackgroundEdges();
+        return this;
     }
 
-    public override PuzzleUtils.PuzzleItems CreateItems()
+    public override PuzzleGUIBuilderProtocol CreateItems()
     {
         Console.WriteLine("Adding default items...");
-        return new PuzzleUtils.DefaultPuzzleItems();
+        this.GUI.items = new PuzzleUtils.DefaultPuzzleItems();
+        return this;
+    }
+
+    public override PuzzleUtils.PuzzleGUI GetPuzzleGUI()
+    {
+        return this.GUI;
+    }
+
+    public override PuzzleUtils.PuzzleGUI Reset()
+    {
+        Console.WriteLine("Reseting default GUI...");
+        this.GUI = new PuzzleUtils.DefaultPuzzleGUI();
+        return this.GUI;
     }
 
 }
