@@ -1,4 +1,4 @@
-![Behavioral - Strategy](https://user-images.githubusercontent.com/60556559/152667864-33fcdd51-072c-4311-a235-baf53c6fd06d.png)
+![Behavioral - Strategy](https://user-images.githubusercontent.com/60556559/153738463-056a91fe-f2da-4946-81fa-88c88c6fd8f5.png)
 
 <p>You need to define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.</p>
 
