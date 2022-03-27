@@ -19,7 +19,7 @@
 </ul>
 <h2>Cons</h2>
 <ul>
-	<li>Not thread safe unless its a robust iterator that allows insertions and deletions. This can be solved by letting the iterator use a <b>Memento<b> to capture the state of an iteration.</li>
+	<li>Not thread safe unless its a robust iterator that allows insertions and deletions. This can be solved by letting the iterator use a <b>Memento</b> to capture the state of an iteration.</li>
 	<li>Usually usefull only if your collection has a complex traverse process.</li>
 </ul>
 <br>
